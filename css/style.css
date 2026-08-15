@@ -1,0 +1,253 @@
+/* Estilos Generales y Paleta Deportiva / Fútbol */
+:root {
+    --color-primary: #111827;    /* Negro / Gris muy oscuro moderno */
+    --color-secondary: #DC2626;  /* Rojo pasión (inspirado en la selección) */
+    --color-accent: #2563EB;     /* Azul brillante de contraste */
+    --color-background: #F3F4F6; /* Gris claro limpio */
+    --color-card-bg: #FFFFFF;
+    --color-text: #1F2937;
+    --color-text-light: #6B7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Barra de Menú */
+header {
+    background-color: var(--color-primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo span {
+    color: var(--color-secondary);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--color-secondary);
+}
+
+.cart-btn {
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.cart-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* Sección Hero / Portada */
+.hero {
+    background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 7rem 2rem;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--color-secondary);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    color: #D1D5DB;
+}
+
+.btn-hero {
+    background-color: var(--color-secondary);
+    color: #FFFFFF;
+    padding: 0.9rem 2.2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* Catálogo de Productos */
+.container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.product-category {
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 0.8rem;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 1.2rem;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    padding: 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-buy:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 5rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    color: #9CA3AF;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
